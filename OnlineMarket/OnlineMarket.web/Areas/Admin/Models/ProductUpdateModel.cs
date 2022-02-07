@@ -74,7 +74,7 @@ namespace OnlineMarket.web.Areas.Admin.Models
                 Name = product.Name;
                 Price = product.Price;
                 Id = product.Id;
-                ImagePath = product.Images.ToString();
+                ImagePath = FormatImageUrl(product.Images?.FirstOrDefault()?.Url);
                     //FormatImageUrl(product.Images?.FirstOrDefault()?.Url);
             }
         }
